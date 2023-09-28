@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 400px;
+            height: 420px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .first {
+            outline: 0;
+            border-width: 0 0 2px;
+            border-color: #f7797d;
+            width: 250px;
+
+        }
+
+        .last {
+            outline: 0;
+            border-width: 0 0 2px;
+            border-color: #f7797d;
+            width: 250px;
+        }
+
+        .email {
+            outline: 0;
+            border-width: 0 0 2px;
+            border-color: #f7797d;
+            width: 250px;
+        }
+
+        .pass {
+            outline: 0;
+            border-width: 0 0 2px;
+            border-color: #f7797d;
+            width: 250px;
+
+        }
+
+        .image1 img {
+            width: 400px;
+            height: 420px;
+            position: relative;
+            top: 2px
+        }
+
+        .container1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-style: solid;
+            gap: 15px;
+            margin-left: 350px;
+            margin-right: 350px;
+            position: relative;
+            bottom: -200px;
+        }
+
+        body {
+            background-image: linear-gradient(to right, rgba(255, 0, 0, 0), #f7797d);
+        }
+
+        .container h1 {
+            color: #f7797d;
+        }
+
+        .sub {
+            color: #f7797d;
+        }
+        a {
+            color: black;
+        }
+
+        a {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container1">
+        <div class="container">
+            <form method="post" action="signinsubmit">
+                <i><p style="color: red;"><%=alert%></p></i>
+                <h1>Ice Cream</h1>
+                <p>Join Us For Delicious Experience!</p>
+                First Name : <input type="text" class="first" name="full_name" id="name" required><br><br>
+                Last Name : <input type="text" class="last" name="last_name" required><br><br>
+                Email ID : <input type="email" class="email" name="email_id" required><br><br>
+                Password : <input type="password" class="pass" name="password" required><br><br>
+                <input type="checkbox">I Accepted terms and conditions.<br><br>
+                <input type="submit" class="sub">
+                <a href="/login">
+                    <p>Login</p>
+                </a>
+            </form>
+        </div>
+        <div class="image1">
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsDLpxLWVF-HzXzy-87RQhGYAQrdj0LSFvpA&usqp=CAU">
+        </div>
+    </div>
+</body>
+
+</html>

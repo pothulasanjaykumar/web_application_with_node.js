@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .input1{
+            outline: 0;
+            border-width: 0 0 2px;
+            border-color: blue;
+            width: 250px;
+        }
+        .input2{
+            outline: 0;
+            border-width: 0 0 2px;
+            border-color: blue;
+            width: 250px;
+        }
+        p{
+            position: relative;
+            right: -60px;
+        }
+        .b1{
+            width: 180px;
+            height: 30px;
+            border-radius: 30px;
+            text-align: center;
+            background-color: rgba(237, 83, 237, 0.911);
+        }
+        .icons{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login h1{
+        color: black;
+        font-size: 40px;
+        font-weight: 700;
+        }
+        .login{
+            width: 400px;
+            height: 400px;
+            background-color: #fff;
+            box-shadow: 10px 10px 5px lightblue;
+            text-align: center;
+            border-radius: 30px;
+            position: relative;
+            bottom: -150px;
+        }
+        body{
+            background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+        }
+        .ima{
+            border-radius: 30px;
+            position: relative;
+            bottom: -150px;
+            box-shadow: 10px 10px 5px lightblue;
+            background-color: #fff;
+        }
+        .block1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        img{
+            border-radius: 30px;
+            cursor: pointer;
+        }
+     
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="block1">
+    <div class="login">
+        <form action="loginsubmit" method="post">
+        <h1>Login</h1><br>
+        <i class="fa-regular fa-envelope"></i><input type="email" placeholder="Enter UserName or Email" name="email_id" class="input1" required ><br><br>
+        <i class="fa-solid fa-key"></i><input type="password" placeholder="Enter Password" name="password" class="input2" required>
+        <a href="#"><p>Forget Password ?</p></a><br><br>
+        <button type="submit" class="b1">LOGIN</button><br><br>
+        </form>
+        <a href="/signup"><p1>Or Signup Using</p1></a><br><br>
+        <div class="icons">
+            <a href=""><i class="fa-brands fa-instagram fa-2x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href=""><i class="fa-brands fa-facebook fa-2x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href=""><i class="fa-brands fa-linkedin fa-2x"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
+    <div class="ima">
+        <img src="https://img.freepik.com/premium-vector/ice-cream-cone-with-single-scoop-ice-cream-covered-colorful-candy-sprinkles-chocolate-syrup-waffle-cone-vector-illustration_727385-1899.jpg?w=2000" width="400px" height="400px">
+    </div>
+    </div>
+</body>
+</html>

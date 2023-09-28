@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .input1 {
+            outline: 0;
+            border-width: 0 0 2px;
+            border-color: blue;
+            width: 300px;
+        }
+
+        .input2 {
+            outline: 0;
+            border-width: 0 0 2px;
+            border-color: blue;
+            width: 300px;
+        }
+
+        .input3 {
+            outline: 0;
+            border-width: 0 0 2px;
+            border-color: blue;
+            width: 300px;
+        }
+
+        .image1 {
+            position: relative;
+            right: -650px;
+            top: -270px;
+            border-radius: 50px;
+            z-index: 1;
+        }
+
+        .BOX1 {
+            width: 400px;
+            height: 300px;
+            background-color: #FFFFFF;
+            text-align: center;
+            position: relative;
+            bottom: -300px;
+            right: -300px;
+            z-index: 2;
+            border-radius: 10px;
+            box-shadow: 10px 10px 5px rgb(250, 177, 241);
+        }
+
+        button {
+            width: 200px;
+            height: auto;
+            background-color: red;
+            color: white;
+            font-weight: 600;
+        }
+
+        body {
+            background: #FFFFFF;
+            background: -webkit-linear-gradient(to right, #f7a3ed, #FFFFFF);
+            background: linear-gradient(to right, #ffd194, #fdc1f6);
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        @media (max-width: 768px) {
+            .BOX1 {
+                width: 90%;
+                margin: 0 auto;
+                right: 0;
+            }
+
+            .image1 {
+                display: none;
+            }
+        }
+        .image2{
+            position: relative;
+            right: -950px;
+            top: -350px;
+            z-index: 2;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f7a3ed;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 3;
+        }
+
+        .back-button:hover {
+            background-color:  rgba(229, 189, 68, 1) ;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <a href="/" class="back-button"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    <div class="BOX1">
+        <form action="contactsubmit" method="post">
+            <i><p><%=alert%></p></i>
+        <h1>Contact Us</h1>
+        <i class="fa-solid fa-user fa-beat-fade fa-1x"></i><input type="text" class="input1" name="text1" placeholder="Enter Name" required><br><br>
+        <i class="fa-regular fa-envelope fa-beat-fade"></i><input type="email" class="input2" name="email1" placeholder="Enter Email" required><br><br>
+        <i class="fa-solid fa-message fa-beat-fade"></i><input type="text" class="input3" name="message1" placeholder="Enter Your Message"><br><br><br><br>
+        <button type="submit">submit</button>
+        </form>
+    </div>
+    <div class="image1">
+        <img src="https://img.freepik.com/free-photo/portrait-little-cheerful-girl-with-ice-cream-colored-background_169016-3648.jpg"
+            width="450px" height="400px" style="border-radius: 10px;">
+    </div>
+    <div class="image2">
+        <img src="https://img.freepik.com/free-photo/melting-ice-cream-cone_23-2150373266.jpg" width="200px" height="200px" style="border-radius: 100px;">
+    </div>
+</body>
+
+</html>

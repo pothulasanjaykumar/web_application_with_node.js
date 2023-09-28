@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+                body {
+            margin: 0;
+            overflow-x: hidden;
+        }
+                @media (max-width: 768px) {
+            .top1 {
+                flex-direction: column;
+                text-align: center;
+                padding: 10px;
+            }
+            
+            .navi {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .signup {
+                width: 100%;
+                margin-top: 10px;
+            }
+            
+            .butt {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
+            }
+        }
+               .top1{
+            background-color: black;
+            color: white;
+            width: auto;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+        }
+        span{
+            font-weight: 400;
+        }
+        a{
+            color: black;
+        }
+        a{
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 20px;
+            font-weight: 600;
+            text-decoration:none; 
+        }
+        .navi{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .signup{
+            width: 200px;
+            height: 30px;
+            background-color:rgba(249, 219, 121, 1);
+            color:black;
+            cursor: pointer;
+        }
+        .butt{
+            display: flex;
+            align-items: center;
+        }
+        .back{
+            background-color:rgba(249, 219, 121, 1);
+            width: auto;
+            height: 100px;
+        }
+        .blue{
+            background-color: rgba(181, 231, 213, 1);
+            width: auto;
+            height: 400px;
+            position: relative;
+            top: -35px;
+        }
+        .blue p{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            bottom: -90px;
+            color: white;
+            font-size: 35px;
+            font-weight: 500;
+        }
+        .blue p1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            bottom: -90px;
+            color: white;
+            font-size: 100px;
+            font-weight: 900;
+        }
+        .box2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+            font-size: 30px;
+            color: rgba(47, 46, 46, 1);
+        }
+        hr{
+            text-align: center;
+            margin-left: 500px;
+            margin-right: 500px;
+            height: 3px;
+            color: black;
+            background-color: black;
+        }
+        .item1{
+         height: 400px;
+         width: 300px;
+        }
+        .item1:hover{
+            transform: scale(1.2);
+        }
+        .item1 p{
+            color: rgba(47, 46, 46, 1);
+            font-size: 25px;
+            font-weight: 300;
+        }
+        .item1 p1{
+            color: black;
+            font-size: 15px;
+        }
+        .icebox1{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .icebox2{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .icebox3 h1{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+            font-size: 30px;
+            color: rgba(47, 46, 46, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .icebox4{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .icebox5{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        footer{
+            background-color: #111;
+            position: relative;
+            bottom: -30px;
+
+        }
+        .footer-container{
+            width: 100%;
+            padding: 70px 30px 20px;
+        }
+        .socialicons{
+            display: flex;
+            justify-content: center;
+        }
+        .socialicons a{
+            text-decoration: none;
+            padding: 10px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 50%;
+        }
+        .socialicons a i{
+            font-size: 2em;
+            color: black;
+            opacity: 0.9;
+        }
+        .socialicons a:hover{
+            background-color: #111;
+            transition: 0.5s;
+        }
+        .socialicons a i{
+            background-color: white;
+            transition: 0.5s;
+        }
+        .footer-nav{
+            margin: 30px 0;
+        }
+        .footer-nav ul{
+            display: flex;
+            justify-content: center;
+        }
+        .footer-nav ul a{
+            color: white;
+            margin: 20px;
+            text-decoration: none;
+            font-size: 1.3em;
+            opacity: 0.7;
+            transition: 0.5s;
+        }
+        .footer-nav ul a:hover{
+            opacity: 1;
+        }
+        .footer-bootom{
+            background-color: #000;
+            width: auto;
+            height: 100px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .designer{
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <div class="top1">
+        <span>𝗩𝗶𝘀𝗵𝗻𝘂 𝗜𝗻𝘀𝘁𝗶𝘁𝘂𝘁𝗲 𝗼𝗳 𝗧𝗲𝗰𝗵𝗻𝗼𝗹𝗼𝗴𝘆 𝗕𝗵𝗶𝗺𝗮𝘃𝗮𝗿𝗮𝗺, 𝗖𝗔 𝟵𝟰𝟭𝟱𝟴 | 𝗗𝗮𝗶𝗹𝘆 𝟴𝗔𝗠-𝟭𝟬𝗣𝗠 </span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <div>
+        <i class="fa-brands fa-instagram"></i>&nbsp;
+        <i class="fa-brands fa-facebook"></i>&nbsp;
+        <i class="fa-brands fa-linkedin"></i>&nbsp;
+        </div>
+    </div>
+    <div class="back">
+    <div class="navi">
+        <nav class="navigation">
+            <a href="/">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/menu" style="text-decoration: underline;">Menu</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/cart">Cart</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="/contact">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        </nav>
+        <div class="butt">
+            <a href="/signup"><button type="submit" class="signup">Signup</button></a>&nbsp;&nbsp;&nbsp;
+            <i class="fa-solid fa-right-to-bracket fa-beat"></i>&nbsp;&nbsp;
+            <a href="/login"><p>Login</p></a>
+        </div>
+    </div>
+    </div>
+    <div class="blue">
+        <p>OUR</p>
+        <p1>FLAVOURS</p1>
+    </div>
+    <div class="box2">
+        <h3>ICE CREAM FLAVOURS</h3>
+    </div>
+    <hr>
+    <div class="icebox1">
+    <div class="item1">
+        <center><img src="https://static.wixstatic.com/media/09438345a23e4fb29a9847f015503f3b.png/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.webp"></center>
+        <center><p>OREO</p></center>
+        <center><p1>This is an item on your menu. Give your item a brief description.</p1><br></center>
+        <center><span>$ 50</span></center>
+    </div>
+    <div class="item1">
+        <center><img src="https://static.wixstatic.com/media/84770f_e4e212cceffe4e72ba6e53ba298fae42~mv2.jpg/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.webp"></center>
+        <center><p>CHOCOLATE SEA & SALT</p></center>
+        <center><p1>This is an item on your menu. Give your item a brief description.</p1><br></center>
+        <center><span>$ 50</span></center>
+    </div>
+    <div class="item1">
+        <center><img src="https://static.wixstatic.com/media/f9c267c502af46dfb2fce7f2645f63a7.jpg/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.webp"></center>
+        <center><p>VANILLA STRABERRY</p></center>
+        <center><p1>This is an item on your menu. Give your item a brief description.</p1><br></center>
+        <center><span>$ 50</span></center>
+    </div>
+    </div>
+    <div class="icebox2">
+        <div class="item1">
+            <center><img src="https://static.wixstatic.com/media/84770f_b360be4ee4a5455f96cabeced52170b5~mv2.jpg/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.webp"></center>
+            <center><p>CHERRY CHEESECAKE</p></center>
+            <center><p1>This is an item on your menu. Give your item a brief description.</p1><br></center>
+            <center><span>$ 50</span></center>
+        </div>
+        <div class="item1">
+            <center><img src="https://static.wixstatic.com/media/b08dd49a62ac48528f6fc7b7e51eb0bd.png/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.webp"></center>
+            <center><p>PITACHIO</p></center>
+            <center><p1>This is an item on your menu. Give your item a brief description.</p1><br></center>
+            <center><span>$ 50</span></center>
+        </div>
+        <div class="item1">
+            <center><img src="https://static.wixstatic.com/media/84770f_f8bf9989b5f54c6f8530c0eeb375d5af~mv2.jpg/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.webp"></center>
+            <center><p>HAZELNUT & COOKIES</p></center>
+            <center><p1>This is an item on your menu. Give your item a brief description.</p1><br></center>
+            <center><span>$ 50</span></center>
+        </div>
+        </div>
+        <div class="icebox3">
+           <h1>DAIRY FREE FLAVOURS</h1> 
+        </div>
+        <hr>
+        <div class="icebox4">
+            <div class="item1">
+                <center><img src="https://static.wixstatic.com/media/84770f_dcd69311e76a4b62a43d2d0fcff0f276~mv2.jpg/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.webp"></center>
+                <center><p>SALTED CARAMEL SOY</p></center>
+                <center><p1>This is an item on your menu. Give your item a brief description.</p1><br></center>
+                <center><span>$ 50</span></center>
+            </div>
+            <div class="item1">
+                <center><img src="https://static.wixstatic.com/media/84770f_9184aeff12194b4b823d84c87a1ac73f~mv2.jpg/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.webp"></center>
+                <center><p>BRAMBLEBERRY SORBET</p></center>
+                <center><p1>This is an item on your menu. Give your item a brief description.</p1><br></center>
+                <center><span>$ 50</span></center>
+            </div>
+            <div class="item1">
+                <center><img src="https://static.wixstatic.com/media/84770f_d610e5857f3c474884b28063098e211b~mv2.jpg/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.webp"></center>
+                <center><p>BANANA & HONEY</p></center>
+                <center><p1>This is an item on your menu. Give your item a brief description.</p1><br></center>
+                <center><span>$ 50</span></center>
+        </div>
+        </div>
+        <div class="icebox5">
+            <div class="item1">
+                <center><img src="https://static.wixstatic.com/media/8713a6015003402db7e0be85d1354db9.png/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.webp"></center>
+                <center><p>RASPBERRY SORBET</p></center>
+                <center><p1>This is an item on your menu. Give your item a brief description.</p1><br></center>
+                <center><span>$ 50</span></center>
+            </div>
+            <div class="item1">
+                <center><img src="https://static.wixstatic.com/media/84770f_c44d3180f02346479eb350fa0ffde9dc~mv2.jpg/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.webp"></center>
+                <center><p>STRAWBERRY & COCONUT</p></center>
+                <center><p1>This is an item on your menu. Give your item a brief description.</p1><br></center>
+                <center><span>$ 50</span></center>
+            </div>
+            <div class="item1">
+                <center><img src="https://static.wixstatic.com/media/84770f_bcc8f0b0e39a4f4ca9850e6048dcfd7c~mv2.jpg/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.webp"></center>
+                <center><p>LIME SORBET</p></center>
+                <center><p1>This is an item on your menu. Give your item a brief description.</p1><br></center>
+                <center><span>$ 50</span></center>
+        </div>
+        </div>
+        <footer>
+            <div class="footer-container">
+                <div class="socialicons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <div class="footer-nav">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bootom">
+                <p>Copyright &copy;2023 Designed by <span class="designer">Sanjay Kumar</span></p>
+            </div>
+            </footer>
+</body>     
+</html>

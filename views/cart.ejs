@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            overflow-x: hidden;
+        }
+        @media (max-width: 768px) {
+            .top1 {
+                flex-direction: column;
+                text-align: center;
+                padding: 10px;
+            }
+
+            .navi {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .signup {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .butt {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
+            }
+        }
+        .top1 {
+            background-color: black;
+            color: white;
+            width: auto;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        span {
+            font-weight: 400;
+        }
+
+        a {
+            color: black;
+        }
+
+        a {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 20px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .navi {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .signup {
+            width: 200px;
+            height: 30px;
+            background-color: rgba(249, 219, 121, 1);
+            color: black;
+            cursor: pointer;
+        }
+
+        .butt {
+            display: flex;
+            align-items: center;
+        }
+        .butt p{
+            position: relative;
+            top: 8px;
+        }
+
+        .back {
+            background-color: rgba(249, 219, 121, 1);
+            width: auto;
+            height: 100px;
+        }
+
+        .box1 {
+            width: 450px;
+            height: 185px;
+            cursor: pointer;
+            border: 2px solid silver;
+            transition: border-color 0.3s;
+        }
+
+        .box1:hover {
+            border-color: black;
+        }
+
+        .box1 button {
+            text-decoration: none;
+        }
+
+        .box1 img {
+            float: right;
+        }
+
+        .box1 span {
+            position: relative;
+            bottom: -30px;
+            right: -20px;
+            color: rgba(47, 46, 46, 1);
+            font-size: 20px;
+        }
+
+        .box1 p {
+            position: relative;
+            bottom: -30px;
+            right: -10px;
+            padding: 10px;
+        }
+
+        .box1 button {
+            position: relative;
+            bottom: -30px;
+            right: -20px;
+        }
+
+        .box2 {
+            width: 450px;
+            height: 185px;
+            cursor: pointer;
+            border: 2px solid silver;
+            transition: border-color 0.3s;
+        }
+
+        .box2:hover {
+            border-color: black;
+        }
+
+        .box2 button {
+            text-decoration: none;
+        }
+
+        .box2 img {
+            float: right;
+        }
+
+        .box2 span {
+            position: relative;
+            bottom: -30px;
+            right: -20px;
+            color: rgba(47, 46, 46, 1);
+            font-size: 20px;
+        }
+
+        .box2 p {
+            position: relative;
+            bottom: -30px;
+            right: -10px;
+            padding: 10px;
+        }
+
+        .box2 button {
+            position: relative;
+            bottom: -30px;
+            right: -20px;
+        }
+
+        .block1 {
+            width: 1000px;
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .block2 {
+            width: 1000px;
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .block3 {
+            width: 1000px;
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .block4 {
+            width: 1000px;
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .main p1 {
+            position: relative;
+            right: -255px;
+            padding-bottom: 30px;
+            font-size: 20px;
+
+            color: rgba(47, 46, 46, 1);
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .b1 {
+            width: 50px;
+            height: 50px;
+            position: relative;
+            right: -300px;
+            border-radius: 10px;
+        }
+
+        .cart-sidebar {
+            position: fixed;
+            top: 0;
+            right: -350px;
+            z-index: 2;
+            bottom: 0;
+            width: 350px;
+            padding: 20px;
+            transition: right 0.3s ease-in-out;
+        }
+        .cart-sidebar.active {
+            right: 0;
+            color: black;
+        }
+
+        #View-Cart-Btn {
+            position: absolute;
+            top: 600px;
+        }
+
+        #pay {
+            margin-left: 80px;
+        }
+
+        #clear {
+            margin-left: 5px;
+        }
+        #cart-container{
+            color: black;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top1">
+        <span>𝗩𝗶𝘀𝗵𝗻𝘂 𝗜𝗻𝘀𝘁𝗶𝘁𝘂𝘁𝗲 𝗼𝗳 𝗧𝗲𝗰𝗵𝗻𝗼𝗹𝗼𝗴𝘆 𝗕𝗵𝗶𝗺𝗮𝘃𝗮𝗿𝗮𝗺, 𝗖𝗔 𝟵𝟰𝟭𝟱𝟴 | 𝗗𝗮𝗶𝗹𝘆 𝟴𝗔𝗠-𝟭𝟬𝗣𝗠 </span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <div>
+            <i class="fa-brands fa-instagram"></i>&nbsp;
+            <i class="fa-brands fa-facebook"></i>&nbsp;
+            <i class="fa-brands fa-linkedin"></i>&nbsp;
+        </div>
+    </div>
+    <div class="back">
+        <div class="navi">
+            <nav class="navigation">
+                <a href="/">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="/menu">Menu</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="/cart" style="text-decoration: underline;">Cart</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="/contact">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            </nav>
+            <div class="butt">
+                <a href="/signup"><button type="submit" class="signup">Signup</button></a>&nbsp;&nbsp;&nbsp;
+                <i class="fa-solid fa-right-to-bracket fa-beat"></i>&nbsp;&nbsp;
+                <a href="/login">
+                    <p>Login</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="cartSidebar" class="cart-sidebar bg-light text-black p-3">
+        <button id="closeSidebar" class="btn btn-danger btn-md float-end me-2 mt-2">close</button>
+        <h5 class="text-center mt-3 text-black-50">Cart Items</h5>
+        <div id="Cart-Container"></div>
+
+
+        <div class=" mb-9" id="View-Cart-Btn">
+            <button id="clear" class="btn btn-outline-danger btn-block" onclick="clearCart()">Clear</button>
+            <button id="pay" class="btn btn-success btn-block" onclick="Pay()">Proceed to Pay</button>
+        </div>
+    </div>
+    <div class="main">
+        <p1>ICE CREAM FLAVOURS</p1>
+        <button class="b1" id="button1"><i class="fa-solid fa-cart-shopping fa-beat"></i></button><span id="cart-count">0</span>
+        <div class="main">
+            <div class="block1">
+                <div class="box1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img src="https://static.wixstatic.com/media/09438345a23e4fb29a9847f015503f3b.png/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.webp"
+                        width="178px" height="178px">
+                    <span>OREO</span>
+                    <p>This is an item on your menu. Give your item a brief description.</p>
+                    <button type="submit">$ 50</button>
+                </div>
+
+                <div class="modal" id="exampleModal" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Please Add Item to Cart.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" onclick="AddCart('Oreo','50')"
+                                    id="add-animation">Addtocart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="box2" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                    <img src="https://static.wixstatic.com/media/84770f_e4e212cceffe4e72ba6e53ba298fae42~mv2.jpg/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.webp"
+                        width="178px" height="178px">
+                    <span>CHOCOLATE SEA & SALT</span>
+                    <p>This is an item on your menu. Give your item a brief description.</p>
+                    <button type="submit">$ 50</button>
+                </div>
+                <div class="modal" id="exampleModal1" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Please Add Item to Cart.</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" onclick="AddCart('CHOCOLATE SEA & SALT','50')">Addtocart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block2">
+                <div class="box1" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                    <img src="https://static.wixstatic.com/media/f9c267c502af46dfb2fce7f2645f63a7.jpg/v1/fill/w_223,h_223,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/f9c267c502af46dfb2fce7f2645f63a7.jpg"
+                        width="178px" height="178px">
+                    <span>VANILLA STRABERRY</span>
+                    <p>This is an item on your menu. Give your item a brief description.</p>
+                    <button type="submit">$ 50</button>
+                </div>
+
+                <div class="modal" id="exampleModal2" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Please Add Item to Cart</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" onclick="AddCart('VANILLA STRABERRY','50')">Addtocart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box2" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                    <img src="https://static.wixstatic.com/media/84770f_b360be4ee4a5455f96cabeced52170b5~mv2.jpg/v1/fill/w_223,h_223,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/84770f_b360be4ee4a5455f96cabeced52170b5~mv2.jpg"
+                        width="178px" height="178px">
+                    <span>CHERRY CHEESECAKE</span>
+                    <p>This is an item on your menu. Give your item a brief description.</p>
+                    <button type="submit">$ 50</button>
+                </div>
+
+                <div class="modal" id="exampleModal3" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Please Add Item to Cart</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" onclick="AddCart('CHERRY CHEESECAKE','50')">Addtocart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="block3">
+                <div class="box1" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                    <img src="https://static.wixstatic.com/media/b08dd49a62ac48528f6fc7b7e51eb0bd.png/v1/fill/w_223,h_223,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/b08dd49a62ac48528f6fc7b7e51eb0bd.png"
+                        width="178px" height="178px">
+                    <span>PITACHIO</span>
+                    <p>This is an item on your menu. Give your item a brief description.</p>
+                    <button type="submit">$ 50</button>
+                </div>
+
+                <div class="modal" id="exampleModal4" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Modal title</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Please Add Item to Cart</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" onclick="AddCart('PITACHIO','50')">Addtocart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box2">
+                    <img src="https://static.wixstatic.com/media/84770f_f8bf9989b5f54c6f8530c0eeb375d5af~mv2.jpg/v1/fill/w_223,h_223,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/84770f_f8bf9989b5f54c6f8530c0eeb375d5af~mv2.jpg"
+                        width="178px" height="178px">
+                    <span>HAZELNUT & COOKIES</span>
+                    <p>This is an item on your menu. Give your item a brief description.</p>
+                    <button type="submit">$ 50</button>
+                </div>
+            </div>
+            <div class="block4">
+                <div class="box1">
+                    <img src="https://static.wixstatic.com/media/84770f_dcd69311e76a4b62a43d2d0fcff0f276~mv2.jpg/v1/fill/w_223,h_223,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/84770f_dcd69311e76a4b62a43d2d0fcff0f276~mv2.jpg"
+                        width="178px" height="178px">
+                    <span>SALTED CARAMEL SOY</span>
+                    <p>This is an item on your menu. Give your item a brief description.</p>
+                    <button type="submit">₹ 50</button>
+                </div>
+                <div class="box2">
+                    <img src="https://static.wixstatic.com/media/84770f_9184aeff12194b4b823d84c87a1ac73f~mv2.jpg/v1/fill/w_223,h_223,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/84770f_9184aeff12194b4b823d84c87a1ac73f~mv2.jpg"
+                        width="178px" height="178px">
+                    <span>BRAMBLEBERRY SORBET</span>
+                    <p>This is an item on your menu. Give your item a brief description.</p>
+                    <button type="submit">$ 50</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const cartSidebar = document.getElementById("cartSidebar");
+    const viewCartButton = document.getElementById("button1");
+    const closeSidebarButton = document.getElementById("closeSidebar");
+
+    function openCartSidebar() {
+        cartSidebar.classList.add("active");
+    }
+
+    function closeCartSidebar() {
+        cartSidebar.classList.remove("active");
+    }
+
+    viewCartButton.addEventListener("click", openCartSidebar);
+    closeSidebarButton.addEventListener("click", closeCartSidebar);
+});
+
+var cart = [];
+var cartCount = 0;
+var totalAmount = 0;
+
+function AddCart(ItemName, Cost) {
+    cart.push({ Item: ItemName, Price: parseFloat(Cost) });
+    totalAmount += parseFloat(Cost);
+    UpdateCart();
+    cartCount++;
+    UpdateCartCount();
+}
+
+function RemoveFromCart(index) {
+    totalAmount -= parseFloat(cart[index].Price);
+    cart.splice(index, 1);
+    UpdateCart();
+    cartCount--;
+    UpdateCartCount();
+}
+
+function UpdateCart() {
+    var cartContainer = document.getElementById("Cart-Container");
+    cartContainer.innerHTML = "";
+    cart.forEach((item, index) => {
+        cartContainer.innerHTML += `
+            <div class="cart-item" style="display:flex; justify-content:space-between;">
+                <span>${item.Item}</span>
+                <span class="cart-price">$${item.Price}</span>
+                <button onclick="RemoveFromCart(${index})">Remove</button>
+            </div>`;
+    });
+
+    cartContainer.innerHTML += `
+        <div class="cart-item cart-total" style="margin-top:20px">
+            <span><strong><center>Total:</strong></span>
+            <span class="cart-price">$${totalAmount.toFixed(2)}</center></span>
+        </div>`;
+}
+
+function clearCart() {
+    cart.length = 0;
+    totalAmount = 0;
+    UpdateCart();
+    cartCount = 0;
+    UpdateCartCount(); 
+}
+
+function Pay() {
+    if (totalAmount === 0) {
+        alert("Please select an item.");
+    } else {
+        location.href = "/checkout";
+    }
+}
+
+function UpdateCartCount() {
+    var button1 = document.getElementById("button1");
+    button1.innerHTML = `<i class="fa-solid fa-cart-shopping fa-beat"></i> (${cartCount})`;
+}
+    </script>
+</body>
+
+</html>

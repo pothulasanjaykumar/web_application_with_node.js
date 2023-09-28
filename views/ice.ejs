@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .top1 {
+            background-color: black;
+            color: white;
+            width: auto;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        span {
+            font-weight: 400;
+        }
+
+        a {
+            color: black;
+        }
+
+        a {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 20px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .navi {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .signup {
+            width: 200px;
+            height: 30px;
+            background-color: rgba(249, 219, 121, 1);
+            color: black;
+            cursor: pointer;
+        }
+
+        .butt {
+            display: flex;
+            align-items: center;
+        }
+
+        .ice {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            bottom: -130px;
+        }
+
+        .Hand {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: -260px;
+            cursor: pointer;
+        }
+
+        .p1 {
+            font-size: 30px;
+            color: white;
+            font-weight: 800;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .cream {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 110px;
+            color: white;
+            position: relative;
+            top: -300px;
+            font-weight: 900;
+            cursor: pointer;
+
+        }
+
+        .back {
+            background-color: rgba(249, 219, 121, 1);
+            width: auto;
+            height: 1100px;
+        }
+
+        .flavor {
+            width: 700px;
+            height: 600px;
+            background-color: rgb(221, 165, 250);
+        }
+
+        .fav {
+            display: flex;
+            justify-content: end;
+        }
+
+        .flavour h1 {
+            display: flex;
+            align-items: center;
+            position: relative;
+            right: -200px;
+            bottom: -80px;
+            animation: slideIn 3s reverse;
+
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .flavour p1 {
+            display: flex;
+            align-items: center;
+            position: relative;
+            right: -280px;
+            bottom: -80px;
+            color: #000;
+            font-size: 20px;
+            font-weight: 700;
+
+        }
+
+        .flavour p {
+            display: flex;
+            align-items: center;
+            position: relative;
+            bottom: -80px;
+            margin-left: 60px;
+            margin-right: 60px;
+            color: black;
+            font-family: monospace;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .menu {
+            width: 200px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            right: -228px;
+            bottom: -200px;
+            cursor: pointer;
+            padding: 10px 20px;
+            background-color: rgba(249, 219, 121, 1);
+            color: black;
+            border-color: #111;
+            border-radius: 5px;
+            cursor: pointer;
+            animation: pulse 1s infinite;
+        }
+
+        .enjoy h1 {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 100px;
+            color: white;
+        }
+
+        .enjoy h2 {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 100px;
+            color: white;
+            font-size: 70px;
+            font-weight: 900;
+            letter-spacing: "-0.05cm";
+        }
+
+        .menu2 {
+            width: 200px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            right: -630px;
+            bottom: -200px;
+            padding: 10px 20px;
+            background-color: rgba(249, 219, 121, 1);
+            color: black;
+            border-color: #111;
+            border-radius: 5px;
+            cursor: pointer;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .enjoy {
+            width: auto;
+            height: 500px;
+            position: relative;
+            top: -30px;
+            background-image: url("https://media-cdn.tripadvisor.com/media/photo-p/1a/fb/c9/16/mixed-fruit-sorbetto.jpg");
+            background-repeat: no-repeat;
+            background-color: rgb(181, 232, 213);
+        }
+
+        footer {
+            background-color: #111;
+            position: relative;
+            top: -30px;
+
+        }
+
+        .footer-container {
+            width: 100%;
+            padding: 70px 30px 20px;
+        }
+
+        .socialicons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .socialicons a {
+            text-decoration: none;
+            padding: 10px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 50%;
+        }
+
+        .socialicons a i {
+            font-size: 2em;
+            color: black;
+            opacity: 0.9;
+        }
+
+        .socialicons a:hover {
+            background-color: #111;
+            transition: 0.5s;
+        }
+
+        .socialicons a i {
+            background-color: white;
+            transition: 0.5s;
+        }
+
+        .footer-nav {
+            margin: 30px 0;
+        }
+
+        .footer-nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-nav ul a {
+            color: white;
+            margin: 20px;
+            text-decoration: none;
+            font-size: 1.3em;
+            opacity: 0.7;
+            transition: 0.5s;
+        }
+
+        .footer-nav ul a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        .footer-bootom {
+            background-color: #000;
+            width: auto;
+            height: 100px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .designer {
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+
+        .dashboard-container {
+            background-color: #f7f7f7;
+            padding: 20px;
+        }
+
+        .dashboard {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dashboard h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .dashboard p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .dashboard-button {
+            background-color: rgba(249, 219, 121, 1);
+            color: black;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin-right: 10px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .dashboard-button:hover {
+            background-color: rgba(229, 189, 68, 1);
+        }
+
+        .dashboard-button:last-child {
+            margin-right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top1">
+        <span>𝗩𝗶𝘀𝗵𝗻𝘂 𝗜𝗻𝘀𝘁𝗶𝘁𝘂𝘁𝗲 𝗼𝗳 𝗧𝗲𝗰𝗵𝗻𝗼𝗹𝗼𝗴𝘆 𝗕𝗵𝗶𝗺𝗮𝘃𝗮𝗿𝗮𝗺, 𝗖𝗔 𝟵𝟰𝟭𝟱𝟴 |
+            𝗗𝗮𝗶𝗹𝘆 𝟴𝗔𝗠-𝟭𝟬𝗣𝗠 </span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <div>
+            <i class="fa-brands fa-instagram"></i>&nbsp;
+            <i class="fa-brands fa-facebook"></i>&nbsp;
+            <i class="fa-brands fa-linkedin"></i>&nbsp;
+        </div>
+    </div>
+    <div class="back">
+        <div class="dashboard-container">
+            <div class="dashboard">
+                <h2>Welcome to Your Dashboard</h2>
+                <p>Hello, <%= name %>!. You're now logged in.</p>
+                <button class="dashboard-button">View Profile</button>
+                <button class="dashboard-button">Settings</button>
+                <button class="dashboard-button" onclick="logout1()"><i
+                        class="fa-solid fa-right-from-bracket fa-beat"></i>&nbsp;LogOut</button>
+            </div>
+        </div>
+        <div class="navi">
+            <nav class="navigation">
+                <a href="/" style="text-decoration: underline;">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="/menu">Menu</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="/cart">Cart</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="/contact">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            </nav>
+            <div class="butt">
+                <a href="/signup"><button type="submit" class="signup">Signup</button></a>&nbsp;&nbsp;&nbsp;
+                <i class="fa-solid fa-right-to-bracket fa-beat"></i></i>&nbsp;&nbsp;
+                <a href="/login">
+                    <p>Login</p>
+                </a>
+            </div>
+        </div>
+        <div class="ice">
+            <img src="https://static.wixstatic.com/media/84770f_bdcc40e3b5ce45f4b672692e83f4917b~mv1.png/v1/fill/w_368,h_721,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/84770f_bdcc40e3b5ce45f4b672692e83f4917b~mv1.png"
+                height="600px" width="300px">
+        </div>
+        <div class="Hand">
+            <p class="p1">HAND CRAFTED</p>
+        </div>
+        <div class="cream">
+            <p>ICE CREAM</p>
+        </div>
+    </div>
+    <div class="fav">
+        <div class="flavour1">
+            <img src="https://static.wixstatic.com/media/a35a7632c8d24cec95168160ed32c8ad.jpg/v1/fill/w_613,h_814,al_r,q_85,usm_0.66_1.00_0.01,enc_auto/a35a7632c8d24cec95168160ed32c8ad.jpg"
+                width="700px" height="500px">
+        </div>
+        <div class="flavour">
+            <h1 style="color: rgba(47, 46, 46, 1);">OUR FLAVOURS</h1>
+            <p1><i>Fresh n' Tasty!</i></p1>
+            <p>Ice cream is a sweet cold dish. It is found almost all over the world.Ice cream is my favourite
+                food.Chocolate ice cream is dark brown, The
+                mango. There are so many varieties in it..</p>
+            <a href="/menu"><button type="submit" class="menu">MENU</button></a>
+        </div>
+    </div>
+    <div class="enjoy">
+        <h1>ENJOY</h1>
+        <h2>DAIRY FREE</h2>
+        <a href="/menu"><button type="submit" class="menu2">MENU</button></a>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="socialicons">
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-youtube"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+            </div> 
+            <div class="footer-nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Our Team</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bootom">
+            <p>Copyright &copy;2023 Designed by <span class="designer">Sanjay Kumar</span></p>
+        </div>
+    </footer>
+    <script>
+        function logout1() {
+            location.href = "/login";
+        }
+    </script>
+</body>
+
+</html>
